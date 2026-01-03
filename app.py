@@ -5,7 +5,7 @@ st.set_page_config(page_title="Medical AI", page_icon="⚕️")
 st.title("⚕️ Medical Triage Assistant")
 
 # Your merged model name
-REPO_ID = "aay2y/medical-triage-bot-merged"
+REPO_ID = "aay2y/medical-triage-bot"
 
 # This looks for the token in Streamlit's hidden settings
 # instead of having it typed out in the code
@@ -38,4 +38,5 @@ if prompt := st.chat_input("Describe your symptoms..."):
             st.write(answer)
             st.session_state.messages.append({"role": "assistant", "content": answer})
         except Exception as e:
+
             st.error("The model is waking up. Please wait 30 seconds and try again.")
