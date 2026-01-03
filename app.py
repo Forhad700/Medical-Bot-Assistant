@@ -1,12 +1,12 @@
 import streamlit as st
 from huggingface_hub import InferenceClient
 
-st.set_page_config(page_title="Medical AI", page_icon="⚕️")
-st.title("⚕️ Medical Triage Assistant")
+st.set_page_config(page_title="Medical Assistant", page_icon="⚕️")
+st.title("🩺👩🏻‍⚕️ Medical Bot Assistant")
 
 # POINT TO A STABLE BASE MODEL INSTEAD
 # This model is almost always 'warm' and ready on HF servers
-REPO_ID = "meta-llama/Meta-Llama-3-8B-Instruct" 
+REPO_ID = "meta-llama/Meta-Llama-3-8B-Instruct"
 
 # Secure Token from Streamlit Secrets
 try:
@@ -29,7 +29,7 @@ if "messages" not in st.session_state:
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
-if prompt := st.chat_input("Describe your symptoms..."):
+if prompt := st.chat_input("🩸 Describe Your Symptoms..."):
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
 
