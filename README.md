@@ -12,12 +12,12 @@ A **Medical Question-Answering  platform** using **Retrieval-Augmented Generatio
 ---
 
 ## Tech Stack
-- **Model:** Llama-3-8B-Instruct (Fine-tuned for medical context)
-- **LangChain:** Orchestration framework for managing language model workflows and retrieval pipelines.
-- **Language:** Python
-- **Frontend:** Streamlit
-- **Backend:** Hugging Face Inference API
-- **Deployment:** Streamlit Cloud
+- **Model** — Llama-3-8B-Instruct (Fine-tuned for medical context)
+- **LangChain** — Orchestration framework for managing language model workflows and retrieval pipelines.
+- **Language** — Python
+- **Frontend** — Streamlit
+- **Backend** — Hugging Face Inference API
+- **Deployment** — Streamlit Cloud
 
 ## How It Works
 - **System Prompting** — The model is initialized with a professional "Medical Triage" persona.
