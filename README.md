@@ -20,7 +20,7 @@ Developed a high-performance **Medical Bot Assistant** built with Fine-Tuned Lla
 - **Frontend** — Streamlit (Reactive Web UI)
 - **Backend** — Hugging Face Inference API (Serverless LLM Hosting)
 ---
-## Pipeline (How It Works)
+## Pipelines (How It Works)
 - **Brain (Fine-Tuning)** — The base Llama-3 model was adapted via QLoRA (Quantized Low-Rank Adaptation) to learn medical vocabulary and triage logic while significantly reducing memory overhead.
 - **Connection (Inference)** — The app communicates with a hosted version of the model via the Hugging Face Inference Client, using Direct API Calls for maximum speed rather than heavy orchestration wrappers.
 - **Experience (Streaming)** — Tokens are streamed from Hugging Face to the Streamlit UI for a fast, responsive user experience. Utilizing Server-Sent Events (SSE), the backend streams tokens to the frontend as they are generated, reducing the initial "Time to First Token" from 5s down to <500ms.
